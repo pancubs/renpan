@@ -1,1 +1,1 @@
-web: env PYTHONPATH=.:vendor ./bin/gunicorn -b 0.0.0.0:$PORT -w 4 webapp:wsgiapp
+web: gunicorn app:app

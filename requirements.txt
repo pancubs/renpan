@@ -1,2 +1,3 @@
-gunicorn
+bcrypt
+Flask
 psycopg2
