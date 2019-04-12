@@ -1,3 +1,2 @@
 gunicorn
-web.py
 psycopg2
