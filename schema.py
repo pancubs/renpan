@@ -34,7 +34,8 @@ class Datum(Table):
 	datatype = sql.CharField() # 'string', 'reference', 'int', 'float', or 'date'
 	ordering = sql.IntegerField() # default null
 
-try:
-	db.create_tables([Site,User,Thing,Version,Datum], safe=True)
-except Exception as e: 
-	raise
+def init():
+	try:
+		db.create_tables([Site,User,Thing,Version,Datum], safe=True)
+	except Exception as e: 
+		raise
