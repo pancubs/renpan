@@ -1,6 +1,8 @@
 import os
 
-import peewee
+from peewee import *
+from playhouse.db_url import connect
 
-url = os.environ['DATABASE_URL']
-db = peewee.playhouse.db_url.connect(url)
+production_mode = os.environ.get('PRODUCTION_MODE', False)
+url = os.environ.get('DATABASE_URL', 'postgres://postgres:postgres@localhost:5432/renpan')
+db = connect(url)

@@ -5,16 +5,12 @@ class Table(sql.Model):
 	class Meta:
 		database = db
 
-class Site(Table):
-	name = sql.CharField()
-
 class User(Table):
 	name = sql.CharField()
 	password = sql.CharField()
-	verified = sql.Boolean()
+	verified = sql.BooleanField()
 
 class Thing(Table):
-	site_id = sql.ForeignKeyField(Site, backref='things')
 	key = sql.CharField()
 
 class Version(Table):
@@ -36,6 +32,6 @@ class Datum(Table):
 
 def init():
 	try:
-		db.create_tables([Site,User,Thing,Version,Datum], safe=True)
+		db.create_tables([User,Thing,Version,Datum], safe=True)
 	except Exception as e: 
 		raise
