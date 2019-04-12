@@ -2,3 +2,4 @@ gunicorn
 bcrypt
 Flask
 psycopg2
+peewee
