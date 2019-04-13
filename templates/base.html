@@ -1,14 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  {% if front %}
-    <title>renpan: {{ title.strip() }}</title>
-  {% else %}
-    <title>{{ title.strip() }} (renpan)</title>
-  {% endif %}
-
-  <link href="http://ren.pancubs.org/css/style.css" type="text/css" rel="stylesheet" />
-
+    {% if front %}
+        <title>renpan: {{ title.strip() }}</title>
+    {% else %}
+        <title>{{ title.strip() }} (renpan)</title>
+    {% endif %}
+<link href="http://static.ren.pancubs.org/css/style.css" type="text/css" rel="stylesheet" />
 {% block head %}{% endblock %}
 </head>
 <body>
