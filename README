@@ -3,27 +3,29 @@ http://ren.pancubs.org/
 
 CONTENTS:
 
-	README		# this file
-	utils/		# utility functions
-	schema.py	# our database schema
-	static/		# static files for the webserver
-	templates/	# templates for the website
-	webapp.py	# the main code of the webapp
+    README      # this file
+
+    utils/      # utility functions
+
+    schema.py   # our database schema
+    static/     # static files for the webserver
+    templates/  # templates for the website
+    webapp.py   # the main code of the webapp
 
 INSTALL:
 
-	# checkout the source code
-	git clone git@github.com:pancubs/renpan.git renpan
-	cd renpan
+    # checkout the source code
+    git clone git@github.com:pancubs/renpan.git renpan
+    cd renpan
+    
+    # create the database
+    createdb renpan
+    python
+    >> import schema
+    >> schema.init()
+    
+    # run the unit tests
+    make test
 
-	# create the database
-	createdb renpan
-	python
-	>> import schema
-	>> schema.init()
-
-	# run the unit tests
-	make test
-
-	# start the webserver
-	make run
+    # start the webserver
+    make run
