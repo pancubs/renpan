@@ -3,7 +3,12 @@ http://ren.pancubs.org/
 
 CONTENTS:
 
-	README	# this file
+	README		# this file
+	utils/		# utility functions
+	schema.py	# our database schema
+	static/		# static files for the webserver
+	templates/	# templates for the website
+	webapp.py	# the main code of the webapp
 
 INSTALL:
 
