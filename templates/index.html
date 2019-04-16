@@ -1,8 +1,12 @@
 {% extends "base.html" %}
 
+{% set front=True %}
+{% set title="a good news organizer" %}
+
 {% block head %}
 {% endblock %}
 
 {% block content %}
-Hello, world!
+Hello, world!<br />
+[Running Python {{ pyversion }}]
 {% endblock %}
